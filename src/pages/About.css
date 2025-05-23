@@ -1,0 +1,236 @@
+    /* Base Styles */
+.about-page {
+    padding: 4rem 8%;
+    max-width: 1400px;
+    margin: 0 auto;
+    color: #fff;
+    background: #0f0f13;
+}
+
+.highlight {
+    background: linear-gradient(90deg, #FF6B6B, #45B7D1);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+    /* Hero Section */
+.about-hero {
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+    margin: 6rem 0;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.about-hero h1 {
+    font-size: 3.5rem;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+}
+
+.about-hero p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    opacity: 0.9;
+    max-width: 600px;
+}
+
+.about-hero-model {
+    width: 400px;
+    height: 400px;
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: -10px 10px 20px rgba(0,0,0,0.3);
+}
+
+.slider-container {
+    overflow: hidden;
+    mask: linear-gradient(to right, transparent, white 5%, white 95%, transparent);
+    -webkit-mask: linear-gradient(to right, transparent, white 5%, white 95%, transparent);
+}
+
+.slider-track {
+    white-space: nowrap;
+    width: max-content;
+    /* margin: 5px 0; */
+    transition: transform 1s linear;
+}
+.sliding{
+    animation: slider 10s linear infinite;
+}
+.reverse{
+    animation: reverse-slider 10s linear infinite;
+}
+
+.slider-item {
+    display: inline-block;
+    width: 20rem;
+    padding: 40px 0;
+    text-align: center;
+    background: #1b1b1f;
+    font-size: 24px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    margin: 10px 10px;
+}
+
+@keyframes slider {
+    to {
+        transform: translate(-50%);
+    }
+}
+@keyframes reverse-slider {
+    0% {
+        transform: translate(-50%);
+    }
+    100% {
+        transform: translate(0%);
+    } 
+}
+
+.experience-section {
+    margin: 8rem 0;
+}
+
+.experience-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.timeline {
+    position: relative;
+    width: 84%;
+    right: -13%;
+    padding-left: 2rem;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: -1.5rem;
+    height: 100%;
+    width: 2px;
+    background: linear-gradient(to bottom, #FF6B6B, #45B7D1);
+}
+
+.timeline-item {
+    position: relative;
+    padding-left: 3rem;
+    padding-bottom: 3rem;
+}
+
+.timeline-year {
+    position: absolute;
+    left: -10rem;
+    top: 4rem;
+    font-weight: 700;
+    color: #45B7D1;
+}
+
+.timeline-content {
+    background: rgba(255,255,255,0.03);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 3px solid #FF6B6B;
+}
+
+.timeline-content h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.timeline-content h3 span {
+    opacity: 0.7;
+    font-weight: 400;
+}
+
+.timeline-content p {
+    opacity: 0.8;
+    line-height: 1.6;
+}
+
+    /* Philosophy Section */
+.philosophy-section {
+    margin: 4rem 0 0;
+}
+
+.philosophy-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.philosophy-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.philosophy-card {
+    background: rgba(255,255,255,0.03);
+    border-radius: 12px;
+    padding: 2rem;
+    border: 1px solid rgba(255,255,255,0.1);
+    transition: all 0.3s ease;
+}
+
+.card-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.philosophy-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.philosophy-card p {
+    opacity: 0.8;
+    line-height: 1.6;
+}
+  
+  /* Responsive */
+@media (max-width: 1024px) {
+    .about-hero {
+        flex-direction: column;
+        gap: 3rem;
+    }
+        
+    .about-hero p {
+        max-width: 100%;
+    }
+    
+    .timeline {
+        width: 100%;
+        right: 0;
+        padding-left: 0;
+    }
+    .timeline-year {
+        position: static;
+        margin-bottom: 0.5rem;
+        color: inherit;
+    }
+}
+@media (max-width: 450px){
+    .about-hero-model {
+        width: 105%;
+        right: 10px;
+        margin: 0 auto;
+    }
+    .animated-box{
+        padding-right: 0px !important;
+    }
+}
+@media (max-width: 400px){
+    .animated-box{
+        font-size: 12px !important;
+    }
+    .about-hero-model{
+        height: 360px;
+    }
+}

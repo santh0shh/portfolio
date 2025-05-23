@@ -1,0 +1,48 @@
+.navbar{
+    background-color: rgba(0,0,0,0.4);
+    padding: 10px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    transition: 0.5s;
+    backdrop-filter: blur(10px);
+}
+.navbar button {
+    color: white;
+    background-color: transparent;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    border: none;
+    outline: none;
+}
+.navbar button::after{
+    content: '';
+    display: block;
+    height: 2px;
+    width: 0;
+    background: #00d4ff;
+}
+.navbar button:hover::after{
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+.navbar.scrolled {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Show/Hide Navbar on scroll */
+.navbar.hidden {
+  top: -100px; /* Hides the navbar off-screen */
+}
+
+.navbar.visible {
+  top: 0;
+}
