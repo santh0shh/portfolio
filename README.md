@@ -14,4 +14,4 @@ A visually stunning portfolio website built with **React**, **Three.js**, **Reac
 
 ## Demo
 
-[Live Demo](https://santhosh.vercel.app)
+[Live Demo](https://santh0sh.vercel.app)
