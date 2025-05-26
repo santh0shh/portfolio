@@ -221,7 +221,7 @@ export default function Contact() {
                 <FiGithub className="social-icon" />
                 <span>GitHub</span>
               </a>
-              <a href="https://www.linkedin.com/in/mnsanthosh/" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.linkedin.com/in/santh0shh/" target="_blank" rel="noopener noreferrer">
                 <FiLinkedin className="social-icon" />
                 <span>LinkedIn</span>
               </a>
